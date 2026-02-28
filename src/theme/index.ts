@@ -1,3 +1,9 @@
+/**
+ * Theme Configuration
+ * Central theme configuration for consistent styling across the app
+ */
+
+// Color palette
 export const colors = {
   primary: '#2563EB',
   secondary: '#10B981',
@@ -10,6 +16,7 @@ export const colors = {
   border: '#E5E7EB',
 };
 
+// Spacing scale
 export const spacing = {
   xs: 4,
   sm: 8,
@@ -19,6 +26,7 @@ export const spacing = {
   xxl: 32,
 };
 
+// Typography styles
 export const typography = {
   h1: {
     fontSize: 32,
