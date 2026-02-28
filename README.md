@@ -22,6 +22,7 @@ A modern, fully-featured mobile application to help students find lost items and
 ### The Challenge
 
 This app was created as part of a Mobile App Development Challenge with:
+
 - ⏱ 2-hour development window
 - 🎯 Modern UI/UX requirements
 - 💻 Production-ready code quality
@@ -30,6 +31,7 @@ This app was created as part of a Mobile App Development Challenge with:
 ## ✨ Features
 
 ### Core Functionality
+
 - 🔍 **Search & Filter** - Intelligent search across all items with category filtering
 - 📋 **Browse Items** - Separate tabs for lost and found items
 - 📤 **Post Items** - User-friendly form to report lost or found items
@@ -38,6 +40,7 @@ This app was created as part of a Mobile App Development Challenge with:
 - 📊 **Statistics** - Quick overview of posted items
 
 ### UI/UX Highlights
+
 - 🎨 **Modern Design** - Clean, intuitive interface with smooth interactions
 - 🌈 **Color-Coded** - Distinct colors for lost (red) vs found (green) items
 - 📐 **Responsive Layout** - Adapts beautifully to all screen sizes
@@ -47,6 +50,7 @@ This app was created as part of a Mobile App Development Challenge with:
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js v18+ (Latest LTS recommended)
 - npm or yarn package manager
 - Expo CLI (will be installed automatically)
@@ -57,17 +61,20 @@ This app was created as part of a Mobile App Development Challenge with:
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone <your-repo-url>
    cd CampusLostandFound
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Start the app:**
+
    ```bash
    npm start
    ```
@@ -132,6 +139,7 @@ CampusLostandFound/
 ## 🎨 Design System
 
 ### Color Palette
+
 - **Primary (Blue)**: `#2563EB` - Main actions and focus states
 - **Secondary (Green)**: `#10B981` - Found items, success feedback
 - **Accent (Amber)**: `#F59E0B` - Warnings, post button highlights
@@ -139,6 +147,7 @@ CampusLostandFound/
 - **Neutral**: Grayscale palette for text hierarchy and backgrounds
 
 ### Typography
+
 - **Display (H1)**: 32px, Bold
 - **Heading (H2)**: 24px, Bold
 - **Subheading (H3)**: 20px, Semibold
@@ -146,6 +155,7 @@ CampusLostandFound/
 - **Caption**: 12px, Medium
 
 ### Components
+
 - ✅ Buttons (Primary, Secondary, Outline)
 - 🎨 Cards with shadows
 - 🏷️ Badges for categories
@@ -156,49 +166,58 @@ CampusLostandFound/
 ## 🛠 Tech Stack
 
 ### Frontend
+
 - **React Native** - Cross-platform mobile development
 - **Expo** - Easy build and deployment
 - **TypeScript** - Type-safe development
 - **React Navigation** - Robust navigation solution
 
 ### Navigation
+
 - `@react-navigation/native` - Navigation fundamentals
 - `@react-navigation/bottom-tabs` - Tab navigation
 - `@react-navigation/stack` - Stack navigation
 
 ### UI & Styling
+
 - **StyleSheet** - React Native styling
 - **Custom theme system** - Centralized design tokens
 
 ### State Management
+
 - React hooks (`useState`)
 - Local component state (no Redux needed for this MVP)
 
 ## 🎯 Key Features Deep Dive
 
 ### 1. Smart Search
+
 - Real-time search across title, description, and location
 - Case-insensitive matching
 - Instant results as you type
 
 ### 2. Category Filtering
+
 - Filter by 8 item categories
 - Works in combination with search
 - Visual feedback for active filter
 
 ### 3. Form Validation
-- Required field indicators (*)
+
+- Required field indicators (\*)
 - Input validation on submit
 - Clear error messages
 - Type selection enforcement
 
 ### 4. Item Details
+
 - Rich information display
 - Status badges (Active/Resolved)
 - Direct contact options
 - Share functionality
 
 ### 5. Empty States
+
 - Custom messages for different scenarios
 - Encouraging icons
 - Helpful tips
