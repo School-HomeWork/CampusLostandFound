@@ -24,16 +24,3 @@ export type MainTabsParamList = {
   Post: undefined;
   Profile: undefined;
 };
-
-export interface RootStackParamList {
-  MainTabs: undefined;
-  ItemDetail: { item: Item };
-  PostItem: { type: 'lost' | 'found' };
-}
-
-export interface MainTabsParamList {
-  LostItems: undefined;
-  FoundItems: undefined;
-  Post: undefined;
-  Profile: undefined;
-}
