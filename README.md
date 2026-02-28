@@ -47,7 +47,9 @@ This app was created as part of a Mobile App Development Challenge with:
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js v18+
+- Node.js v18+ (Latest LTS recommended)
+- npm or yarn package manager
+- Expo CLI (will be installed automatically)
 - npm or yarn
 - Expo CLI (optional but recommended)
 - Expo Go app on your phone (for testing)
