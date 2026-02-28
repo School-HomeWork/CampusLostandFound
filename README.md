@@ -78,14 +78,17 @@ This app was created as part of a Mobile App Development Challenge with:
 
 👉 **For detailed testing instructions, see [README-EXPO.md](README-EXPO.md)**
 
-## 📱 Screenshots
+## � Screenshots
 
-### Main Screens
+<div align="center">
 
-| Lost Items | Found Items | Post Item | Details |
-|-----------|-----------|---------|---------|
-| Search and filter lost items | Browse found items | Report new items | Full item information |
-| Category filtering | Status badges | Form validation | Contact options |
+<img src="assets/images/scs/ScreenShot1.PNG" width="30%" alt="Lost Items Screen" />
+&nbsp;&nbsp;
+<img src="assets/images/scs/ScreenShot2.PNG" width="30%" alt="Found Items Screen" />
+&nbsp;&nbsp;
+<img src="assets/images/scs/ScreenShot3.PNG" width="30%" alt="Post Item Screen" />
+
+</div>
 
 ## 📁 Project Structure
 
