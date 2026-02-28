@@ -132,11 +132,11 @@ CampusLostandFound/
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary (Blue)**: `#2563EB` - Main actions and focus
-- **Secondary (Green)**: `#10B981` - Found items, success states
-- **Accent (Amber)**: `#F59E0B` - Warnings, post button
-- **Danger (Red)**: `#EF4444` - Lost items, errors
-- **Neutral**: Grays for text and backgrounds
+- **Primary (Blue)**: `#2563EB` - Main actions and focus states
+- **Secondary (Green)**: `#10B981` - Found items, success feedback
+- **Accent (Amber)**: `#F59E0B` - Warnings, post button highlights
+- **Danger (Red)**: `#EF4444` - Lost items, error states
+- **Neutral**: Grayscale palette for text hierarchy and backgrounds
 
 ### Typography
 - **Display (H1)**: 32px, Bold
