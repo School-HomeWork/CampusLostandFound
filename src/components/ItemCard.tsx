@@ -3,6 +3,10 @@ import { View, Text, StyleSheet, Pressable, ScrollView, FlatList } from 'react-n
 import { Item } from '../types';
 import { colors, spacing, typography, borderRadius, shadows } from '../theme';
 
+/**
+ * ItemCard Component
+ * Displays a card with item details including type (lost/found), title, and description
+ */
 export const ItemCard = ({ 
   item, 
   onPress 
