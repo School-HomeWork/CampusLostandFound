@@ -1,5 +1,7 @@
 # 🎓 Campus Lost & Found App
 
+> **📲 Live Demo (Expo):** **[https://expo.dev/accounts/ibrahimalicode/projects/campus-lost-found/updates/c74ecb07-c3ea-4f96-b9aa-8b0c849dd58d](https://expo.dev/accounts/ibrahimalicode/projects/campus-lost-found/updates/c74ecb07-c3ea-4f96-b9aa-8b0c849dd58d)**
+
 <div align="center">
 
 [![React Native](https://img.shields.io/badge/React%20Native-0.72-blue?logo=react)](https://reactnative.dev)
