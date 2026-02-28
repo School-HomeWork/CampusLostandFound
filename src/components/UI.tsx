@@ -2,6 +2,10 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable, TextInput } from 'react-native';
 import { colors, spacing, typography, borderRadius, shadows } from '../theme';
 
+/**
+ * Reusable Button Component
+ * Supports multiple variants: primary, secondary, and outline
+ */
 export const Button = ({ 
   title, 
   onPress, 
