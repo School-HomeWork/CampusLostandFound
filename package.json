@@ -2,6 +2,8 @@
   "name": "campuslostandfound",
   "main": "App.tsx",
   "version": "1.0.0",
+  "description": "A mobile app for campus lost and found items",
+  "author": "Campus App Developer",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
