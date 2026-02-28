@@ -9,8 +9,8 @@ export interface Item {
   contactName: string;
   contactEmail: string;
   contactPhone: string;
-  status: 'active' | 'resolved';
-  type: 'lost' | 'found';
+  status: "active" | "resolved";
+  type: "lost" | "found";
 }
 
 export type RootStackParamList = {

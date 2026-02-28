@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#2563EB"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTabletMode": true,
       "bundleIdentifier": "com.campus.lostandfound"

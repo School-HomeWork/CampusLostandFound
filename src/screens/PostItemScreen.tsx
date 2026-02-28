@@ -1,20 +1,36 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TextInput, Pressable, Alert } from 'react-native';
-import { colors, spacing, typography, borderRadius } from '../theme';
-import { Button, Section } from '../components/UI';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TextInput,
+  Pressable,
+  Alert,
+} from "react-native";
+import { colors, spacing, typography, borderRadius } from "../theme";
+import { Button, Section } from "../components/UI";
 
 export const PostItemScreen = () => {
-  const [itemType, setItemType] = useState<'lost' | 'found' | null>(null);
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
-  const [location, setLocation] = useState('');
-  const [contactName, setContactName] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
-  const [contactPhone, setContactPhone] = useState('');
+  const [itemType, setItemType] = useState<"lost" | "found" | null>(null);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("");
+  const [location, setLocation] = useState("");
+  const [contactName, setContactName] = useState("");
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactPhone, setContactPhone] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const categories = ['Electronics', 'Bags', 'Clothing', 'Accessories', 'Documents', 'Jewelry', 'Other'];
+  const categories = [
+    "Electronics",
+    "Bags",
+    "Clothing",
+    "Accessories",
+    "Documents",
+    "Jewelry",
+    "Other",
+  ];
 
   const styles = StyleSheet.create({
     container: {
@@ -36,7 +52,7 @@ export const PostItemScreen = () => {
       padding: spacing.lg,
     },
     typeSelector: {
-      flexDirection: 'row',
+      flexDirection: "row",
       gap: spacing.md,
       marginBottom: spacing.lg,
     },
@@ -44,7 +60,7 @@ export const PostItemScreen = () => {
       flex: 1,
       paddingVertical: spacing.lg,
       borderRadius: borderRadius.lg,
-      alignItems: 'center',
+      alignItems: "center",
       borderWidth: 2,
     },
     typeButtonActive: {
@@ -57,7 +73,7 @@ export const PostItemScreen = () => {
     },
     typeButtonText: {
       ...typography.body,
-      fontWeight: '600',
+      fontWeight: "600",
     },
     typeButtonTextActive: {
       color: colors.white,
@@ -77,13 +93,13 @@ export const PostItemScreen = () => {
     },
     label: {
       ...typography.body,
-      fontWeight: '600',
+      fontWeight: "600",
       color: colors.dark,
       marginBottom: spacing.sm,
     },
     categoryContainer: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
+      flexDirection: "row",
+      flexWrap: "wrap",
       gap: spacing.sm,
       marginBottom: spacing.lg,
     },
@@ -103,7 +119,7 @@ export const PostItemScreen = () => {
     },
     categoryText: {
       ...typography.caption,
-      fontWeight: '600',
+      fontWeight: "600",
     },
     categoryTextActive: {
       color: colors.white,
@@ -131,44 +147,48 @@ export const PostItemScreen = () => {
 
   const handleSubmit = () => {
     if (!itemType) {
-      Alert.alert('Error', 'Please select Lost or Found item');
+      Alert.alert("Error", "Please select Lost or Found item");
       return;
     }
     if (!title.trim()) {
-      Alert.alert('Error', 'Please enter item title');
+      Alert.alert("Error", "Please enter item title");
       return;
     }
     if (!category) {
-      Alert.alert('Error', 'Please select a category');
+      Alert.alert("Error", "Please select a category");
       return;
     }
     if (!location.trim()) {
-      Alert.alert('Error', 'Please enter location');
+      Alert.alert("Error", "Please enter location");
       return;
     }
     if (!contactName.trim() || !contactEmail.trim() || !contactPhone.trim()) {
-      Alert.alert('Error', 'Please fill in all contact information');
+      Alert.alert("Error", "Please fill in all contact information");
       return;
     }
 
     setIsSubmitting(true);
     setTimeout(() => {
-      Alert.alert('Success', 'Your item has been posted! Thank you for helping the community.', [
-        {
-          text: 'OK',
-          onPress: () => {
-            setItemType(null);
-            setTitle('');
-            setDescription('');
-            setCategory('');
-            setLocation('');
-            setContactName('');
-            setContactEmail('');
-            setContactPhone('');
-            setIsSubmitting(false);
+      Alert.alert(
+        "Success",
+        "Your item has been posted! Thank you for helping the community.",
+        [
+          {
+            text: "OK",
+            onPress: () => {
+              setItemType(null);
+              setTitle("");
+              setDescription("");
+              setCategory("");
+              setLocation("");
+              setContactName("");
+              setContactEmail("");
+              setContactPhone("");
+              setIsSubmitting(false);
+            },
           },
-        },
-      ]);
+        ],
+      );
     }, 1000);
   };
 
@@ -190,22 +210,40 @@ export const PostItemScreen = () => {
             <Pressable
               style={[
                 styles.typeButton,
-                itemType === 'lost' ? styles.typeButtonActive : styles.typeButtonInactive,
+                itemType === "lost"
+                  ? styles.typeButtonActive
+                  : styles.typeButtonInactive,
               ]}
-              onPress={() => setItemType('lost')}
+              onPress={() => setItemType("lost")}
             >
-              <Text style={[styles.typeButtonText, itemType === 'lost' ? styles.typeButtonTextActive : styles.typeButtonTextInactive]}>
+              <Text
+                style={[
+                  styles.typeButtonText,
+                  itemType === "lost"
+                    ? styles.typeButtonTextActive
+                    : styles.typeButtonTextInactive,
+                ]}
+              >
                 ❌ Lost
               </Text>
             </Pressable>
             <Pressable
               style={[
                 styles.typeButton,
-                itemType === 'found' ? styles.typeButtonActive : styles.typeButtonInactive,
+                itemType === "found"
+                  ? styles.typeButtonActive
+                  : styles.typeButtonInactive,
               ]}
-              onPress={() => setItemType('found')}
+              onPress={() => setItemType("found")}
             >
-              <Text style={[styles.typeButtonText, itemType === 'found' ? styles.typeButtonTextActive : styles.typeButtonTextInactive]}>
+              <Text
+                style={[
+                  styles.typeButtonText,
+                  itemType === "found"
+                    ? styles.typeButtonTextActive
+                    : styles.typeButtonTextInactive,
+                ]}
+              >
                 ✅ Found
               </Text>
             </Pressable>
@@ -213,7 +251,9 @@ export const PostItemScreen = () => {
         </Section>
 
         <Section title="Item Details">
-          <Text style={styles.label}>Title <Text style={styles.requiredMarker}>*</Text></Text>
+          <Text style={styles.label}>
+            Title <Text style={styles.requiredMarker}>*</Text>
+          </Text>
           <TextInput
             style={styles.input}
             placeholder="e.g., Silver AirPods Pro"
@@ -224,7 +264,7 @@ export const PostItemScreen = () => {
 
           <Text style={styles.label}>Description</Text>
           <TextInput
-            style={[styles.input, { minHeight: 100, textAlignVertical: 'top' }]}
+            style={[styles.input, { minHeight: 100, textAlignVertical: "top" }]}
             placeholder="Provide details about the item..."
             value={description}
             onChangeText={setDescription}
@@ -232,21 +272,27 @@ export const PostItemScreen = () => {
             placeholderTextColor={colors.gray}
           />
 
-          <Text style={styles.label}>Category <Text style={styles.requiredMarker}>*</Text></Text>
+          <Text style={styles.label}>
+            Category <Text style={styles.requiredMarker}>*</Text>
+          </Text>
           <View style={styles.categoryContainer}>
             {categories.map((cat) => (
               <Pressable
                 key={cat}
                 style={[
                   styles.categoryButton,
-                  category === cat ? styles.categoryButtonActive : styles.categoryButtonInactive,
+                  category === cat
+                    ? styles.categoryButtonActive
+                    : styles.categoryButtonInactive,
                 ]}
                 onPress={() => setCategory(cat)}
               >
                 <Text
                   style={[
                     styles.categoryText,
-                    category === cat ? styles.categoryTextActive : styles.categoryTextInactive,
+                    category === cat
+                      ? styles.categoryTextActive
+                      : styles.categoryTextInactive,
                   ]}
                 >
                   {cat}
@@ -255,7 +301,9 @@ export const PostItemScreen = () => {
             ))}
           </View>
 
-          <Text style={styles.label}>Location <Text style={styles.requiredMarker}>*</Text></Text>
+          <Text style={styles.label}>
+            Location <Text style={styles.requiredMarker}>*</Text>
+          </Text>
           <TextInput
             style={styles.input}
             placeholder="e.g., Central Library - 3rd Floor"
@@ -266,7 +314,9 @@ export const PostItemScreen = () => {
         </Section>
 
         <Section title="Contact Information">
-          <Text style={styles.label}>Your Name <Text style={styles.requiredMarker}>*</Text></Text>
+          <Text style={styles.label}>
+            Your Name <Text style={styles.requiredMarker}>*</Text>
+          </Text>
           <TextInput
             style={styles.input}
             placeholder="Full name"
@@ -275,7 +325,9 @@ export const PostItemScreen = () => {
             placeholderTextColor={colors.gray}
           />
 
-          <Text style={styles.label}>Email <Text style={styles.requiredMarker}>*</Text></Text>
+          <Text style={styles.label}>
+            Email <Text style={styles.requiredMarker}>*</Text>
+          </Text>
           <TextInput
             style={styles.input}
             placeholder="your.email@university.edu"
@@ -285,7 +337,9 @@ export const PostItemScreen = () => {
             placeholderTextColor={colors.gray}
           />
 
-          <Text style={styles.label}>Phone <Text style={styles.requiredMarker}>*</Text></Text>
+          <Text style={styles.label}>
+            Phone <Text style={styles.requiredMarker}>*</Text>
+          </Text>
           <TextInput
             style={styles.input}
             placeholder="+1-555-0000"
@@ -298,7 +352,7 @@ export const PostItemScreen = () => {
 
         <View style={styles.submitButton}>
           <Button
-            title={isSubmitting ? '⏳ Posting...' : '📤 Post Item'}
+            title={isSubmitting ? "⏳ Posting..." : "📤 Post Item"}
             onPress={handleSubmit}
             disabled={isSubmitting}
           />

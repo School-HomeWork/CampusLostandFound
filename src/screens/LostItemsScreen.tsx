@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
-import { View, ScrollView, StyleSheet, Text, Pressable } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../types';
-import { colors, spacing, typography } from '../theme';
-import { getMockItems, searchItems, filterByCategory, CATEGORIES } from '../data/mockData';
-import { SearchBar, Section, EmptyState } from '../components/UI';
-import { ItemListView } from '../components/ItemCard';
+import React, { useState } from "react";
+import { View, ScrollView, StyleSheet, Text, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../types";
+import { colors, spacing, typography } from "../theme";
+import {
+  getMockItems,
+  searchItems,
+  filterByCategory,
+  CATEGORIES,
+} from "../data/mockData";
+import { SearchBar, Section, EmptyState } from "../components/UI";
+import { ItemListView } from "../components/ItemCard";
 
 type NavProp = NativeStackNavigationProp<RootStackParamList>;
 
 export const LostItemsScreen = () => {
   const navigation = useNavigation<NavProp>();
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const allItems = getMockItems('lost');
+  const allItems = getMockItems("lost");
   let filteredItems = searchItems(allItems, searchQuery);
   filteredItems = filterByCategory(filteredItems, selectedCategory);
 
@@ -40,7 +45,7 @@ export const LostItemsScreen = () => {
       padding: spacing.lg,
     },
     categoryScroll: {
-      flexDirection: 'row',
+      flexDirection: "row",
       marginBottom: spacing.lg,
     },
     categoryButton: {
@@ -60,7 +65,7 @@ export const LostItemsScreen = () => {
     },
     categoryText: {
       ...typography.caption,
-      fontWeight: '600',
+      fontWeight: "600",
     },
     categoryTextActive: {
       color: colors.white,
@@ -69,7 +74,7 @@ export const LostItemsScreen = () => {
       color: colors.gray,
     },
     statsContainer: {
-      flexDirection: 'row',
+      flexDirection: "row",
       gap: spacing.md,
       marginBottom: spacing.lg,
     },
@@ -98,7 +103,7 @@ export const LostItemsScreen = () => {
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Lost Items</Text>
-        <SearchBar 
+        <SearchBar
           value={searchQuery}
           onChangeText={setSearchQuery}
           placeholder="Search lost items..."
@@ -107,8 +112,8 @@ export const LostItemsScreen = () => {
 
       <View style={styles.content}>
         <Section title="Filter by Category">
-          <ScrollView 
-            horizontal 
+          <ScrollView
+            horizontal
             showsHorizontalScrollIndicator={false}
             style={styles.categoryScroll}
           >
@@ -117,8 +122,8 @@ export const LostItemsScreen = () => {
                 key={category}
                 style={[
                   styles.categoryButton,
-                  selectedCategory === category 
-                    ? styles.categoryButtonActive 
+                  selectedCategory === category
+                    ? styles.categoryButtonActive
                     : styles.categoryButtonInactive,
                 ]}
                 onPress={() => handleCategorySelect(category)}
@@ -126,8 +131,8 @@ export const LostItemsScreen = () => {
                 <Text
                   style={[
                     styles.categoryText,
-                    selectedCategory === category 
-                      ? styles.categoryTextActive 
+                    selectedCategory === category
+                      ? styles.categoryTextActive
                       : styles.categoryTextInactive,
                   ]}
                 >
@@ -156,10 +161,10 @@ export const LostItemsScreen = () => {
             icon="🔍"
           />
         ) : (
-          <ItemListView 
+          <ItemListView
             items={filteredItems}
             onItemPress={(item) => {
-              navigation.navigate('ItemDetail', { item });
+              navigation.navigate("ItemDetail", { item });
             }}
           />
         )}
